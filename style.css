@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+
+/**
+ * @package     WP-Basis Theme
+ * @subpackage  WP-Basis Theme Child Starter
+ * @template    stylesheet
+ * @since       0.0.1
+ * 
+ * Theme Name:  WP-Basis Child:starter
+ * Theme URI:   http://wpbasis.de/
+ * Description: A boiler plate to create your own child theme for WP Basis.
+ * Author:      Frank Bültge
+ * Author URI:  http://bueltge.de/
+ * Version:     0.0.1 Beta
+ * Template:    WordPress-Basis-Theme
+ * Status:      Development
+ * Tags:        translation-ready, theme-options
+ * License:     GNU General Public License (GPL) version 3
+ * License URI: license.txt
+ */
+
+body {
+	color: red;
+}
