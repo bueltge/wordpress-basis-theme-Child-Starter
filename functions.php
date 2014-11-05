@@ -76,6 +76,28 @@ function add_stylesheets() {
 	 */
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
+		/**
+	 * Register the Parent CSS style file, if it is necessary.
+	 *
+	 * @param string $handle Name of the stylesheet.
+	 * @param string|bool $src Path to the stylesheet from the root directory of WordPress. Example: '/assets/style.css'.
+	 * @param array $deps Array of handles of any stylesheet that this stylesheet depends on.
+	 *  (Stylesheets that must be loaded before this stylesheet.) Pass an empty array if there are no dependencies.
+	 * @param string|bool $ver String specifying the stylesheet version number. Set to null to disable.
+	 *  Used to ensure that the correct version is sent to the client regardless of caching.
+	 * @param string $media The media for which this stylesheet has been defined.
+	 */
+	wp_register_style(
+		'wp_basis_parent_style',
+		get_template_directory_uri() . '/style' . $suffix . '.css',
+		array(),
+		'20140206',
+		'screen'
+	);
+	
+	// Enqueue the Parent CSS style file
+	wp_enqueue_style( 'wp_basis_parent_style' );
+	
 	/**
 	 * Register CSS style file.
 	 *
