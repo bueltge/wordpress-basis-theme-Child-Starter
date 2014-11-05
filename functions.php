@@ -89,7 +89,7 @@ function add_stylesheets() {
 	 */
 	wp_register_style(
 		'wp_basis_parent_style',
-		get_template_directory_uri() . '/style' . $suffix . '.css',
+		get_template_directory_uri() . '/assets/css/style' . $suffix . '.css',
 		array(),
 		'20140206',
 		'screen'
